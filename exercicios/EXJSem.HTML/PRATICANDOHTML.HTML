@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratice of some functions</title>
+<style>
+    body {
+        background-color: black;
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <h1> Estrangeiro </h1>
+    <p>How are you from? <input type="text" name="nasc" id="nasc"> </p>
+    <p>Whats is your name? <input type="text" name="yname" id="yname"> </p>
+    <input type="button" value="THIS is one BUTTON" onclick="enviar()">
+    <div id="res"> </div>
+
+    <script>
+        function enviar() { 
+            var nasc = document.getElementById('nasc').value;
+            var yname = document.getElementById('yname').value;
+            var res = document.getElementById('res');
+
+            if (nasc !== 'brasil') {
+                res.innerHTML = `${yname} you are stranger.`;
+            } else {
+                res.innerHTML = `${yname} you are Brazilian`;
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
